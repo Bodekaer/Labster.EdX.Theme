@@ -34,6 +34,9 @@ $gray-2: #f2f2f2;
 $gray-1: #fbfbfb; //Main BG Color
 $white: $gray-1;
 
+$labster-black: #000000;
+$labster-dark-blue: #16283a;
+
 $black: #2e2e2e;
 $black-80: #585858;
 
@@ -44,7 +47,8 @@ $black-80: #585858;
 //-----------------
 
 $theme-sans-font: 'Source Sans';
-$sans-serif: $theme-sans-font;
+$labster-font: 'Lato';
+$sans-serif: $labster-font, $theme-sans-font;
 $body-font-family: $sans-serif;
 
 $theme-serif-font: 'Crimson Text';
@@ -63,10 +67,11 @@ $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
 $header-image: none;
-$header-bg: transparentize(lighten($secondary, 18.5%), .25);
+// $header-bg: transparentize(lighten($secondary, 18.5%), .25);
+$header-bg: $labster-black;
 $courseware-header-image: none;
 $courseware-header-bg: transparentize(lighten($secondary, 18.5%), .25);
-$footer-bg: $secondary-25;
+$footer-bg: $labster-dark-blue;
 $courseware-footer-border: 1px solid $main-bg-60;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
