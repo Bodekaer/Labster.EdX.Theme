@@ -18,12 +18,12 @@ $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom
 //Main BG Color Variables
 $main-bg: #822537;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
-$main-bg-25: lighten($main-bg, 25%); 
+$main-bg-25: lighten($main-bg, 25%);
 
 //Secondary Color Variables
 $secondary: #b5a4b7;
 $secondary-50: lighten($secondary, 9%);
-$secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
+$secondary-25: lighten($secondary, 20%); //Important Heading BG Color
 
 //Gray Color Variables
 $gray: #3f3f3f; //Main Text Color
@@ -36,10 +36,18 @@ $white: $gray-1;
 
 $labster-black: #000000;
 $labster-dark-blue: #16283a;
+$labster-blue: #1d354d;
 $labster-yellow: #f6c218;
 $labster-white: #ffffff;
 $gray-1: $labster-white;
 $white: $labster-white;
+
+$dark-color: $labster-dark-blue;
+$main-color: $labster-blue;
+
+$main-bg: $labster-blue;
+$main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
+$main-bg-25: lighten($main-bg, 25%);
 
 $black: #2e2e2e;
 $black-80: #585858;
@@ -226,7 +234,7 @@ header.global {
         padding: 10px 0;
 
         .nav-global {
-            a.cta-register {
+            a {
                 color: $labster-white;
                 padding: 10px 20px;
 
