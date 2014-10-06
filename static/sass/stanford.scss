@@ -37,6 +37,9 @@ $white: $gray-1;
 $labster-black: #000000;
 $labster-dark-blue: #16283a;
 $labster-yellow: #f6c218;
+$labster-white: #ffffff;
+$gray-1: $labster-white;
+$white: $labster-white;
 
 $black: #2e2e2e;
 $black-80: #585858;
@@ -224,11 +227,11 @@ header.global {
 
         .nav-global {
             a.cta-register {
-                color: #fff;
+                color: $labster-white;
                 padding: 10px 20px;
 
                 &:hover {
-                    background-color: #fff;
+                    background-color: $labster-white;
                     color: $labster-black;
                 }
             }
@@ -236,11 +239,12 @@ header.global {
 
         .nav-courseware {
             a.cta-login {
-                background-color: #fff;
+                background-color: $labster-white;
                 border-radius: 0px;
                 color: $labster-black;
                 margin-top: -15px;
                 padding: 24px 20px;
+                text-transform: uppercase;
 
                 &:hover {
                     background-color: $labster-yellow;
@@ -262,3 +266,20 @@ header.global {
     }
 }
 
+.wrapper-footer {
+    footer {
+        a:link, a:visited {
+            color: $labster-white;
+        }
+
+        .colophon {
+            .nav-colophon {
+                li {
+                    a {
+                        color: $labster-white;
+                    }
+                }
+            }
+        }
+    }
+}
