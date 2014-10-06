@@ -36,6 +36,7 @@ $white: $gray-1;
 
 $labster-black: #000000;
 $labster-dark-blue: #16283a;
+$labster-yellow: #f6c218;
 
 $black: #2e2e2e;
 $black-80: #585858;
@@ -212,3 +213,52 @@ $video-thumb-url: '../themes/default/images/edx.png';
     margin: 0 !important;
     text-align: right;
 }
+
+// hmm ...
+header.global {
+    border-bottom: $labster-black;
+    height: 64px;
+
+    nav {
+        padding: 10px 0;
+
+        .nav-global {
+            a.cta-register {
+                color: #fff;
+                padding: 10px 20px;
+
+                &:hover {
+                    background-color: #fff;
+                    color: $labster-black;
+                }
+            }
+        }
+
+        .nav-courseware {
+            a.cta-login {
+                background-color: #fff;
+                border-radius: 0px;
+                color: $labster-black;
+                margin-top: -15px;
+                padding: 24px 20px;
+
+                &:hover {
+                    background-color: $labster-yellow;
+                }
+            }
+        }
+    }
+
+    h1 {
+        img {
+            height: 45px;
+        }
+    }
+}
+
+.home {
+    > header {
+        margin-top: -25px;
+    }
+}
+
