@@ -2,13 +2,10 @@ Installing
 ==========
 
 - Clone this to `devstack/themes/labster`: `git clone https://github.com/kriwil/labster-edx-theme.git labster`
-- Add these to your `lms/envs/private.py`:
+- edit /edx/app/edxapp/edx-platform/lms.env.json (as `edxapp` user):
 
-```
-PLATFORM_NAME = 'LabsterX'
-THEME_NAME = 'labster'
-FAVICON_PATH = "themes/{}/images/favicon.ico".format(THEME_NAME)
-```
+    - `"USE_CUSTOM_THEME": true`
+    - `"THEME_NAME": "labster"`
 
 - Re-run `paver devstack lms` (without `--fast` flag)
 
