@@ -1,8 +1,8 @@
 Installing
 ==========
 
-- Clone this to `devstack/themes/labster`: `git clone https://github.com/kriwil/labster-edx-theme.git labster`
-- edit /edx/app/edxapp/edx-platform/lms.env.json (as `edxapp` user):
+- Clone this to `devstack/themes/`: `git clone https://github.com/kriwil/labster-edx-theme.git labster`
+- edit /edx/app/edxapp/edx-platform/lms.env.json (inside vagrant, as `edxapp` user):
 
     - `"USE_CUSTOM_THEME": true`
     - `"THEME_NAME": "labster"`
