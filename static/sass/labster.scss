@@ -9,6 +9,14 @@
 //  Color variables (from Stanford palette unless noted)
 //-----------------
 
+$labster-black: #000000;
+$labster-dark-blue: #16283a;
+$labster-blue: #1d354d;
+$labster-light-blue: #578fbf;
+$labster-yellow: #f6c218;
+$labster-white: #ffffff;
+
+
 //Main Color Variables
 $main-color: #f7691f;
 $dark-color: #ea281f; //Link Color
@@ -21,7 +29,7 @@ $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%);
 
 //Secondary Color Variables
-$secondary: #b5a4b7;
+$secondary: $labster-light-blue;
 $secondary-50: lighten($secondary, 9%);
 $secondary-25: lighten($secondary, 20%); //Important Heading BG Color
 
@@ -34,11 +42,6 @@ $gray-2: #f2f2f2;
 $gray-1: #fbfbfb; //Main BG Color
 $white: $gray-1;
 
-$labster-black: #000000;
-$labster-dark-blue: #16283a;
-$labster-blue: #1d354d;
-$labster-yellow: #f6c218;
-$labster-white: #ffffff;
 $gray-1: $labster-white;
 $white: $labster-white;
 
@@ -208,7 +211,7 @@ $homepage-bg-image: url('https://labsterim.s3.amazonaws.com/media/uploads/edx/la
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: 'https://labsterim.s3.amazonaws.com/media/uploads/edx/labster_logo.png';
+$video-thumb-url: 'https://labsterim.s3.amazonaws.com/media/uploads/edx/new_video_thumb.jpg';
 
 //-----------------
 //  Mixin Styles
@@ -271,23 +274,37 @@ header.global {
 .home {
     > header {
         margin-top: -25px;
+
+        .title {
+            > hgroup {
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 }
 
 .wrapper-footer {
     footer {
-        a:link, a:visited {
-            color: $labster-white;
-        }
-
         .colophon {
             .nav-colophon {
                 li {
-                    a {
+                    a:link, a:visited {
                         color: $labster-white;
+                    }
+                    a:hover {
+                        border: 0;
+                        color: $labster-light-blue;
+                        text-decoration: none;
                     }
                 }
             }
         }
     }
+}
+
+.view-register .introduction header .title .title-sub {
+    text-transform: none;
+    margin-left: 0;
 }
