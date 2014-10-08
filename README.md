@@ -1,23 +1,14 @@
-Overview
-========
-This directory stores a default theme for an Open edX instance.
+Installing
+==========
 
-We've organized the tree to mimic the directory structure of the edX
-codebase so that it's easy to tell where the files will end up upon
-deploy. We'll use a special settings file to set the template and
-staticfiles paths properly to point to these files.
+- Clone this to `devstack/themes/labster`: `git clone https://github.com/kriwil/stanford-edx-theme.git labster`
+- Add these to your `lms/envs/private.py`:
 
-![Alt text](/default_theme_screenshot.jpg?raw=true "Open edX Default Theme Screenshot")
+    PLATFORM_NAME = 'LabsterX'
+    THEME_NAME = 'labster'
+    FAVICON_PATH = "themes/{}/images/favicon.ico".format(THEME_NAME)
 
-Theme Authoring
-===============
-To customize your theme:
-- Fork this repository.
-- Clone it into the theme directory next to your edx-platform directory and rename the theme directory to your new theme's name.
-- Upload your own image assets.
-- Edit the .scss file in static/sass/ and rename the file with your theme's name.
-- Edit the lms.envs.json file in edx-platform and set 'USE_CUSTOM_THEME' to true, and 'THEME_NAME' to your theme's name.
-
+- Re-run `paver devstack lms` (without `--fast` flag)
 
 License
 =======
