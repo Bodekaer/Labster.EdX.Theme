@@ -1,7 +1,7 @@
 Installing
 ==========
 
-- Clone this to `devstack/themes/labster`: `git clone https://github.com/kriwil/stanford-edx-theme.git labster`
+- Clone this to `devstack/themes/labster`: `git clone https://github.com/kriwil/labster-edx-theme.git labster`
 - Add these to your `lms/envs/private.py`:
 
 ```
