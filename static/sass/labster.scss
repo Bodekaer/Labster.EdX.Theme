@@ -228,6 +228,16 @@ $video-thumb-url: 'https://labsterim.s3.amazonaws.com/media/uploads/edx/new_vide
     text-align: right;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
 // hmm ...
 header.global {
     border-bottom: $labster-black;
@@ -286,6 +296,7 @@ header.global {
 }
 
 .wrapper-footer {
+
     footer {
         .colophon {
             .nav-colophon {
