@@ -308,3 +308,20 @@ header.global {
     text-transform: none;
     margin-left: 0;
 }
+
+header.global.slim h2,
+header.global.slim h2 span {
+    text-shadow: none !important;
+    color: $labster-white !important;
+}
+
+nav.course-material ol.course-tabs li a.active {
+    background-color: $labster-blue !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+div.info-wrapper section.updates > h1 {
+    font-weight: 300 !important;
+}
