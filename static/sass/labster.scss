@@ -527,3 +527,7 @@ section.profile-sidebar {
 #uvTab {
     top: 230px !important;
 }
+
+.course-index div#accordion ul.ui-accordion-content li.graded>a {
+    background-image: none !important;
+}
