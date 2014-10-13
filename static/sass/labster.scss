@@ -541,8 +541,12 @@ section.profile-sidebar {
     font-weight: 300 !important;
 }
 
-.xmodule_display.xmodule_SequenceModule nav.sequence-nav {
-    display: none;
+.button-labster-blue {
+    background-color: $labster-light-blue !important;
+    background-image: none !important;
+    border: 1px solid $labster-blue !important;
+    box-shadow: none !important;
+    color: $labster-white !important;
 }
 
 // Hide "overview" in course info
