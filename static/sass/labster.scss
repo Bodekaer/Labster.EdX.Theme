@@ -544,3 +544,11 @@ section.profile-sidebar {
 .xmodule_display.xmodule_SequenceModule nav.sequence-nav {
     display: none;
 }
+
+.button-labster-blue {
+    background-color: $labster-light-blue !important;
+    background-image: none !important;
+    border: 1px solid $labster-blue !important;
+    box-shadow: none !important;
+    color: $labster-white !important;
+}
