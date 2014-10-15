@@ -523,8 +523,16 @@ section.profile-sidebar {
     }
 }
 
+// uservoice widget
 #uvTab {
     top: 230px !important;
+    background: 50% 0px no-repeat rgb(29, 53, 77) !important;
+    text-decoration: none;
+}
+
+#uvTab a {
+    padding: 20px 8px 20px 6px !important;
+    transform: rotate(180deg);
 }
 
 .course-index div#accordion ul.ui-accordion-content li.graded>a {
