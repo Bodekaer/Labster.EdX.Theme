@@ -529,8 +529,33 @@ section.profile-sidebar {
     }
 }
 
+// uservoice widget
 #uvTab {
     top: 230px !important;
+    border: 1px #fff;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+    background: 50% 0px no-repeat rgb(29, 53, 77) !important;
+    border-style: solid solid solid none;
+    text-decoration: none;
+    font-family: $labster-font;
+    left: 0;
+    margin-top: -43px;
+    position: fixed;
+    z-index: 9999;
+}
+
+#uvTab a {
+    padding: 20px 8px 20px 6px !important;
+    transform: rotate(270deg);
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+.uv-scale-top, .uv-scale-top-left, .uv-scale-top-right, .uv-scale-bottom, .uv-scale-bottom-left, .uv-scale-bottom-right, .uv-scale-right, .uv-scale-right-top, .uv-scale-right-bottom, .uv-scale-left, .uv-scale-left-top, .uv-scale-left-bottom, .uv-slide-top, .uv-slide-bottom, .uv-slide-left, .uv-slide-right {
+    opacity: 1;
+    transition: all 80ms ease-out 0s;
 }
 
 .course-index div#accordion ul.ui-accordion-content li.graded>a {
