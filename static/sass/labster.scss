@@ -429,12 +429,11 @@ nav.course-material ol.course-tabs li a.active {
     text-shadow: none !important;
 }
 
-div.info-wrapper section.updates > h1 {
-    font-weight: 300 !important;
-}
-
-section.instructor-dashboard-content-2 h1,
-.profile-wrapper .course-info header h1 {
+.profile-wrapper .course-info header h1,
+.xmodule_display.xmodule_CapaModule div.problem-progress,
+div.gradebook-wrapper section.gradebook-content h1,
+div.info-wrapper section.updates > h1,
+section.instructor-dashboard-content-2 h1 {
     font-weight: 300 !important;
 }
 
@@ -567,10 +566,6 @@ section.profile-sidebar {
     h4 {
         margin-bottom: 16px;
     }
-}
-
-.xmodule_display.xmodule_CapaModule div.problem-progress {
-    font-weight: 300 !important;
 }
 
 .button-labster-blue {
