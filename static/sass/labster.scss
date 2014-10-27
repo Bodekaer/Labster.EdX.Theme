@@ -587,6 +587,23 @@ section.profile-sidebar {
     }
 }
 
+.button-labster-grey {
+    background-image: none !important;
+    color: $labster-black;
+    box-shadow: none !important;
+    padding: 10px 20px !important ;
+    border-radius: 4px !important;
+
+    &:hover {
+        color: $labster-blue;
+    }
+
+    &:active {
+        color: $labster-black;
+    }
+
+}
+
 // Hide "overview" in course info
 .course-info .container nav {
     display: none;
