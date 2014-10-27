@@ -575,6 +575,16 @@ section.profile-sidebar {
     border: 1px solid $labster-blue !important;
     box-shadow: none !important;
     color: $labster-white !important;
+    padding: 10px 20px !important ;
+    border-radius: 4px !important;
+
+    &:hover {
+        background-color: $labster-light-blue !important;
+    }
+
+    &:active {
+        background-color: $labster-blue !important;
+    }
 }
 
 // Hide "overview" in course info
