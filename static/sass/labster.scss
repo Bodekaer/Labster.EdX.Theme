@@ -548,6 +548,7 @@ section.profile-sidebar {
     padding: 40px 4px 30px 4px !important;
     margin: 0 3px 0 -10px !important;
     transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
     display: block;
     text-decoration: none;
     font-size: 16px;
