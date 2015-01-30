@@ -59,3 +59,12 @@ a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0
 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- end of crazy egg script -->
+
+<!-- show user voice button only if user has logged in -->
+<script>
+  var isUserLoggedIn = "${user.is_authenticated()}";
+  console.log(isUserLoggedIn);
+  if (isUserLoggedIn == "False") {
+    $('#uvTab').hide();
+  }
+</script>
