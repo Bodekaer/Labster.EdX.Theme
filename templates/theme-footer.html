@@ -63,7 +63,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <!-- show user voice button only if user has logged in -->
 <script>
   var isUserLoggedIn = "${user.is_authenticated()}";
-  console.log(isUserLoggedIn);
   if (isUserLoggedIn == "False") {
     $('#uvTab').hide();
   }
