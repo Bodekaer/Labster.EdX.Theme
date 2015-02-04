@@ -15,6 +15,8 @@ $labster-blue: #1d354d;
 $labster-light-blue: #578fbf;
 $labster-yellow: #f6c218;
 $labster-white: #ffffff;
+$labster-green: #429b40;
+$labster-light-green: #54b551;
 
 
 //Main Color Variables
@@ -605,6 +607,24 @@ section.profile-sidebar {
 
 }
 
+.button-labster-green {
+    background-color: $labster-green !important;
+    background-image: none !important;
+    border: 1px solid $labster-green !important;
+    box-shadow: none !important;
+    color: $labster-white !important;
+    padding: 10px 20px !important ;
+    border-radius: 4px !important;
+
+    &:hover {
+        background-color: $labster-light-green !important;
+    }
+
+    &:active {
+        background-color: $labster-green !important;
+    }
+}
+
 // Hide "overview" in course info
 .course-info .container nav {
     display: none;
@@ -613,4 +633,9 @@ section.profile-sidebar {
 .group-form-personalinformation select {
     height: 43px;
     width: 600px !important;
+}
+
+.dashboard .profile-sidebar .user-info>ul {
+    border: 1px solid #376492;
+    border-radius: 5px;
 }
