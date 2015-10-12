@@ -243,8 +243,8 @@ body {
 // hmm ...
 header.global {
     border-bottom: $labster-black;
-    height: 79px !important;
-    margin: -10px !important;
+    height: 64px !important;
+
     nav {
         padding: 10px 0;
 
@@ -287,7 +287,7 @@ header.global {
 .home {
     > header {
         height: 430px;
-
+        overflow: initial !important;
         .outer-wrapper {
             padding-top: 258px;
         }
@@ -652,5 +652,16 @@ a.cta.cta-login {
     height: 70px;
 }
 div.colophon {
-    margin-left: 60px;
+    margin-left: 120px;
+    font-weight: bold !important;
+    font-size: 1.03em !important;
+}
+ol.right.nav-courseware {
+    margin-top: -10px !important;
+}
+footer .references a {
+    margin-right: 120px;
+}
+a .user-link {
+    padding: 5px 2px 5px 10px;
 }
