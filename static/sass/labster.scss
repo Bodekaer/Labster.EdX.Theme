@@ -243,8 +243,8 @@ body {
 // hmm ...
 header.global {
     border-bottom: $labster-black;
-    height: 64px;
-
+    height: 79px !important;
+    margin: -10px !important;
     nav {
         padding: 10px 0;
 
@@ -640,4 +640,17 @@ section.profile-sidebar {
 
 header.global h1.logo a {
     padding-left: 60px;
+    height: 72px;
+    margin-top: -10px;
+}
+.nav-colophon li {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a.cta.cta-login {
+    height: 70px;
+}
+div.colophon {
+    margin-left: 60px;
 }
