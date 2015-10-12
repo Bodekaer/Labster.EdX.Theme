@@ -401,9 +401,7 @@ header.global {
         }
     }
 }
-a.user-link {
-    @include padding(5px, 2px, 5px, 10px);
-}
+
 .view-register .introduction header .title .title-sub {
     text-transform: none;
     margin-left: 0;
