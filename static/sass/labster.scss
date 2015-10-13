@@ -245,14 +245,6 @@ body header.global {
     border-bottom: $labster-black;
     height: 64px;
 
-    .user {
-        .primary:last-child {
-            a {
-                padding: 5px 10px 6px;
-            }
-        }
-    }
-
     nav {
         padding: 10px 0;
 
@@ -686,6 +678,11 @@ section.profile-sidebar {
 .group-form-personalinformation select {
     height: 43px;
     width: 600px !important;
+}
+
+body .dashboard .profile-sidebar {
+    box-shadow: none;
+    border: none;
 }
 
 .dashboard .profile-sidebar .user-info>ul {
