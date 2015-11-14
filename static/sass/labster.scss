@@ -240,10 +240,18 @@ body {
     flex: 1;
 }
 
+body .find-courses {
+  margin-bottom: -40px;
+}
+
 // hmm ...
 body header.global {
     border-bottom: $labster-black;
     height: 64px;
+
+    .user > .primary:last-child > a {
+      padding: 5px 10px 11px;
+    }
 
     nav {
         padding: 10px 0;
@@ -458,9 +466,11 @@ body header.global {
     margin-left: 0;
 }
 
-header.global.slim {
+body header.global.slim {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+
+    h2 {width: 45%;}
 
     h2,
     h2 span {
