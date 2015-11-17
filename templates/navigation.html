@@ -155,3 +155,45 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 
 <%include file="help_modal.html"/>
+
+## Only COURSEWARE page has both `course` and `COURSE_TITLE` parameters.
+% if 'course' in context.keys() and 'COURSE_TITLE' in context.keys():
+<div id="unity-browser-support" class="wrapper-msg urgency-low warning" style="display:none;">
+  <div class="msg">
+    <i class="msg-icon fa fa-warning"></i>
+    <div class="msg-content">
+      <h3 class="title">${_("Please use Firefox or Safari")}</h3>
+      <div class="copy">
+        <p>
+          ${_('Currently Labster is best supported on Firefox and Safari browsers.')}<br>
+          ${_('It appears that you are currently using another browser, so we recommend that you launch e.g. Firefox to start using Labster.')}<br>
+          <a href="http://web.labster.com/faqs">${_('Read more here...')}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<%block name="js_extra">
+<script type="text/javascript">
+  <!--
+  var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+  if (document.location.protocol == 'https:')
+     unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+  document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+  -->
+</script>
+<script type="text/javascript">
+;(function($){
+  var unity = new UnityObject2(),
+      $warning = $('#unity-browser-support');
+
+  unity.observeProgress(function (progress) {
+     switch(progress.pluginStatus) {
+       case "unsupported": $warning.show(); break;
+      }
+  });
+  $(function() { unity.initPlugin(null, ''); });
+}).call(this, jQuery);
+</script>
+</%block>
+% endif
