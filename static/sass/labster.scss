@@ -737,3 +737,17 @@ header.global h1.logo a {
 }
 
 .course-wrapper .course-index { vertical-align: top; }
+
+body div.course-wrapper section.course-content .vert-mod .vert>.xblock-student_view {
+  border-bottom: 0;
+
+  &[data-block-type=lti] {
+    .problem-header, .problem-progress { display: none; }
+
+    .lti-link.external {
+      text-align: center;
+
+      a { line-height: 3em; }
+    }
+  }
+}
