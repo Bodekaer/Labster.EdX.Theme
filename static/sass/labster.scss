@@ -715,3 +715,25 @@ header.global h1.logo a {
     }
   }
 }
+
+#courseware-search-results.search-results {
+  .search-results-item {
+    .result-excerpt {
+      display: inline-block;
+      width: 80%;
+      vertical-align: top;
+    }
+    .result-link {
+      display: inline-block;
+      width: 19%;
+      text-align: right;
+      position: static;
+      vertical-align: top;
+    }
+  }
+  .search-info + p {
+    margin-top: 15px;
+  }
+}
+
+.course-wrapper .course-index { vertical-align: top; }
