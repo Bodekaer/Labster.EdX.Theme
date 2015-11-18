@@ -703,3 +703,15 @@ body .dashboard .profile-sidebar {
 header.global h1.logo a {
     padding-left: 60px;
 }
+
+#unity-browser-support.wrapper-msg {
+  .msg-icon {
+    vertical-align: top;
+    margin-right: 5px;
+
+    &:before {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
