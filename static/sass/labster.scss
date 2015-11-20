@@ -716,7 +716,8 @@ header.global h1.logo a {
   }
 }
 
-#courseware-search-results.search-results {
+#courseware-search-results.search-results,
+#dashboard-search-results.search-results {
   .search-results-item {
     .result-excerpt {
       display: inline-block;
