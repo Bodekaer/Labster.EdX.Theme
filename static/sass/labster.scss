@@ -776,9 +776,11 @@ body .xmodule_display.xmodule_SequenceModule  .sequence-nav {
         &:first-child { display: block; }
 
         a {
+          display: inline-block;
           border: 0;
           text-align: left;
           height: auto;
+          width: auto;
           margin-bottom: 30px;
 
           &.active { display: none; }
