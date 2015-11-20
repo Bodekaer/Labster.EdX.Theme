@@ -752,3 +752,53 @@ body div.course-wrapper section.course-content .vert-mod .vert>.xblock-student_v
     }
   }
 }
+
+body .xmodule_display.xmodule_SequenceModule  .sequence-nav {
+  margin: 0;
+
+  button.sequence-nav-button, .left-shadow, .right-shadow {
+    display: none;
+  }
+  .sequence-list-wrapper {
+    background: none;
+    box-shadow: none;
+    height: auto;
+    border: 0;
+    margin: 0;
+
+    #sequence-list {
+      padding: 0;
+      position: static;
+
+      li {
+        display: none;
+        &:first-child { display: block; }
+
+        a {
+          border: 0;
+          text-align: left;
+          height: auto;
+          margin-bottom: 30px;
+
+          &.active { display: none; }
+
+          .icon { line-height: auto; }
+
+          p {
+            color: $link-color;
+            display: inline-block;
+            opacity: 1;
+            position: static;
+            background: none;
+            visibility: visible;
+            text-shadow: none;
+            margin: 0;
+            padding: 0 6px;
+
+            &:after { display: none; }
+          }
+        }
+      }
+    }
+  }
+}
