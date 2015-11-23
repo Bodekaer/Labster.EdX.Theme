@@ -253,6 +253,10 @@ body header.global {
       padding: 4px 10px 11px;
       line-height: 17px;
     }
+    .user .dropdown-menu {
+      top: 40px;
+      &:before { box-shadow: none; }
+    }
 
     nav {
         padding: 10px 0;
