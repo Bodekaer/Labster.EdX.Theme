@@ -643,3 +643,49 @@ section.profile-sidebar {
 header.global h1.logo a {
     padding-left: 60px;
 }
+
+#labster-notification.wrapper-msg {
+  .msg-icon {
+    vertical-align: top;
+    margin-right: 5px;
+
+    &:before {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+
+#labster-notification {
+  display: none;
+
+  .nav-actions {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .action-dismiss a {
+    background: none;
+    border-color: #1d354d;
+    color: #1d354d;
+    text-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 4px 20px;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: #1d354d;
+      color: #fff;
+    }
+  }
+}
