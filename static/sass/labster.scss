@@ -644,6 +644,8 @@ header.global h1.logo a {
     padding-left: 60px;
 }
 
+body .course-info header.course-profile {margin-top: 0;}
+
 #labster-notification.wrapper-msg {
   .msg-icon {
     vertical-align: top;
@@ -682,10 +684,12 @@ header.global h1.logo a {
     border-radius: 5px;
     padding: 4px 20px;
     letter-spacing: 1px;
+    span {color: #1d354d;}
 
     &:hover {
       background: #1d354d;
       color: #fff;
+      span {color: #fff;}
     }
   }
 }
