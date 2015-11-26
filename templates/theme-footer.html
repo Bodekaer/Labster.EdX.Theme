@@ -1,8 +1,10 @@
 ## mako
 <%!
+    from django.conf import settings
     from django.core.urlresolvers import reverse
     from django.utils.translation import ugettext as _
     from datetime import date
+    from microsite_configuration import microsite
 %>
 <%namespace name='static' file='/static_content.html'/>
 <div id="uvTab" class="uv-tab uv-slide-left ">
@@ -15,17 +17,19 @@
     <footer>
         <div class="colophon">
           <nav class="nav-colophon" aria-label="${_('About')}">
-      ##      <ol>
-      ##        <li><a href="${marketing_link('TOS')}">${_("Terms of Service")}</a></li>
-      ##        <li><a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a></li>
-      ##        <li><a href="${marketing_link('TESTIMONIALS')}">${_("Testimonial")}</a></li>
-      ##        <li><a href="${marketing_link('SUPPORT')}">${_("Support")}</a></li>
-      ##        <li><a href="${marketing_link('FAQ')}">${_("FAQ")}</a></li>
-      ##        <li><a href="${marketing_link('PRICING')}">${_("Pricing")}</a></li>
-      ##        <li><a href="${marketing_link('CAREERS')}">${_("Careers")}</a></li>
-      ##        <li><a href="${marketing_link('ABOUT')}">${_("Contact")}</a></li>
-      ##        <li><a href="${marketing_link('BLOG')}">${_("Blog")}</a></li>
-      ##    </ol>
+            % if microsite.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+            <ol>
+              <li><a href="${marketing_link('TOS')}">${_("Terms of Service")}</a></li>
+              <li><a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a></li>
+              <li><a href="${marketing_link('TESTIMONIALS')}">${_("Testimonial")}</a></li>
+              <li><a href="${marketing_link('SUPPORT')}">${_("Contact")}</a></li>
+              <li><a href="${marketing_link('FAQ')}">${_("FAQ")}</a></li>
+              <li><a href="${marketing_link('PRICING')}">${_("Pricing")}</a></li>
+              <li><a href="${marketing_link('CAREERS')}">${_("Careers")}</a></li>
+              <li><a href="${marketing_link('ABOUT')}">${_("About")}</a></li>
+              <li><a href="${marketing_link('BLOG')}">${_("Blog")}</a></li>
+            </ol>
+            % else:
             <ol>
                 <li><a href="http://web.labster.com/terms-and-conditions/" target="_blank">Terms of Service</a></li>
                 <li><a href="http://web.labster.com/terms-and-conditions/#privacy" target="_blank">Privacy Policy</a></li>
@@ -37,6 +41,7 @@
                 <li><a href="http://web.labster.com/about" target="_blank">Contact</a></li>
                 <li><a href="http://web.labster.com/blog" target="_blank">Blog</a></li>
             </ol>
+            % endif
           </nav>
         </div>
         <div class="references">
