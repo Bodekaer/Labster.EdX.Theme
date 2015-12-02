@@ -765,3 +765,10 @@ body .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
 }
 
 body .course-info header.course-profile {margin-top: 0;}
+
+body #login-and-registration-container {padding-bottom: 50px;}
+body #register {
+  .textarea-goals, .textarea-mailing_address {
+    display: none;
+  }
+}
