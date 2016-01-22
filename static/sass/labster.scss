@@ -772,3 +772,10 @@ body #register {
     display: none;
   }
 }
+
+body .instructor-dashboard-content-2 .instructor-nav .nav-item {
+  a[data-section="student_admin"],
+  a[data-section="grading_policy"] {
+    display: none;
+  }
+}
