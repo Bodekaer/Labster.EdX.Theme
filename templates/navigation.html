@@ -74,6 +74,9 @@ site_status_msg = get_site_status_msg(course_id)
             <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
           </li>
         %endif
+        <li>
+          <a href="${reverse('dashboard')}">${_("Dashboard")}</a>
+        </li>
       </%block>
     </ol>
     <ol class="user">
