@@ -181,10 +181,10 @@ site_status_msg = get_site_status_msg(course_id)
   <div class="msg">
     <i class="msg-icon fa fa-warning"></i>
     <div class="msg-content">
-      <h3 class="title">${_("Please use Firefox or Safari")}</h3>
+      <h3 class="title">${_("Please use Firefox or Chrome")}</h3>
       <div class="copy">
         <p>
-          ${_('Currently Labster is best supported on Firefox and Safari browsers.')}<br>
+          ${_('Currently Labster is best supported on Firefox and Chrome browsers.')}<br>
           ${_('It appears that you are currently using another browser, so we recommend that you launch e.g. Firefox to start using Labster.')}<br>
           <a href="http://web.labster.com/faqs">${_('Read more here...')}</a>
         </p>
@@ -194,24 +194,43 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 <%block name="js_extra">
 <script type="text/javascript">
-  <!--
-  var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-  if (document.location.protocol == 'https:')
-     unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-  document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-  -->
-</script>
-<script type="text/javascript">
 ;(function($){
-  var unity = new UnityObject2(),
-      $warning = $('#unity-browser-support');
+  var $warning = $('#unity-browser-support');
 
-  unity.observeProgress(function (progress) {
-     switch(progress.pluginStatus) {
-       case "unsupported": $warning.show(); break;
+  /**
+   * Simple version of Unity's browser check logic.
+   * @return {Boolean}
+   */
+  var isSafari = function() {
+    var ua = navigator.userAgent;
+
+    if (ua.indexOf("Opera") != -1 || ua.indexOf("Chrome") != -1) {
+        return false;
+    } else if (ua.indexOf("Safari") != -1) {
+        return true;
+    }
+    return false;
+  }
+
+  /**
+   * Unity-like check of Full Screen API support.
+   * @return {Boolean}
+   */
+  var hasFullscreen = function() {
+    var e = document.createElement('canvas'),
+        is_supported = e["requestFullScreen"] || ["moz", "ms", "webkit"].some(function(prefix) {
+          return e[prefix + "RequestFullScreen"];
+        });
+
+      if(is_supported) {
+        if (isSafari()) return false;
+        return true;
       }
-  });
-  $(function() { unity.initPlugin(null, ''); });
+
+      return false;
+  };
+
+  if (!hasFullscreen()) $warning.show();
 }).call(this, jQuery);
 </script>
 </%block>
