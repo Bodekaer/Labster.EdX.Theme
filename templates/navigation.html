@@ -198,21 +198,6 @@ site_status_msg = get_site_status_msg(course_id)
   var $warning = $('#unity-browser-support');
 
   /**
-   * Simple version of Unity's browser check logic.
-   * @return {Boolean}
-   */
-  var isSafari = function() {
-    var ua = navigator.userAgent;
-
-    if (ua.indexOf("Opera") != -1 || ua.indexOf("Chrome") != -1) {
-        return false;
-    } else if (ua.indexOf("Safari") != -1) {
-        return true;
-    }
-    return false;
-  }
-
-  /**
    * Unity-like check of Full Screen API support.
    * @return {Boolean}
    */
@@ -222,12 +207,7 @@ site_status_msg = get_site_status_msg(course_id)
           return e[prefix + "RequestFullScreen"];
         });
 
-      if(is_supported) {
-        if (isSafari()) return false;
-        return true;
-      }
-
-      return false;
+      return is_supported;
   };
 
   if (!hasFullscreen()) $warning.show();
