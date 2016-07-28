@@ -68,7 +68,7 @@ site_status_msg = get_site_status_msg(course_id)
             <a href="${marketing_link('COURSES')}">${_('Browse Labs')}</a>
           </li>
         % endif
-        % if settings.LABSTER_ENABLE_VOUCHERS:
+        % if settings.LABSTER_FEATURES.get('ENABLE_VOUCHERS'):
           <li class="nav-global-01">
             <a href="${reverse('enter_voucher')}">${_('Enter voucher')}</a>
           </li>
